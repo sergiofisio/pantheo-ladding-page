@@ -1,0 +1,17 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+@import "tailwindcss";
+
+@theme {
+  --color-background: #171c22;
+  --color-blue: #90caf9;
+  --color-button: #639aeb;
+  --color-darkBlue: #407bff;
+  --color-white: #fff;
+  --color-black: #000;
+  --font-display: Montserrat, serif;
+  --font-poppins: Poppins, sans-serif;
+  --spacing: 0.25rem;
+  --shadow-button: -0.5rem 0.2rem 1rem 0.1rem #fff;
+  --shadow-buttonHover: -0.5rem 0.2rem 1rem 0.1rem #90caf9;
+}
