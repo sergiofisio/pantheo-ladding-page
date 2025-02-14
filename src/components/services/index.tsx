@@ -1,7 +1,5 @@
 import image from "../../assets/img/servvico.svg";
 import icon from "../../assets/icon/tool.svg";
-import Card from "../cards/card";
-import Title from "../title";
 import aplicativo from "../../assets/icon/mobile.svg";
 import ecomerce from "../../assets/icon/ecommerce.png";
 import computer from "../../assets/icon/computer.svg";
