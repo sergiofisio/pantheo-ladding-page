@@ -37,7 +37,7 @@ const differences = [
   },
   {
     icon: aplicativo,
-    title: "Soluções Escaláveis",
+    title: "Inovação Constante",
     description:
       "Inovação constante, trazendo as últimas tendências tecnológicas para impulsionar sua empresa e mantê-la competitiva no mercado.",
   },
@@ -45,19 +45,16 @@ const differences = [
 
 export default function Differences() {
   return (
-    <section className="bg-white px-30 pb-10 flex flex-col items-center justify-between gap-20">
-      <div className="flex justify-between items-center h-fit">
-        <div>
-          <img className="w-6xl" src={image} alt="Imagem serviços" />
-        </div>
-        <div className="flex flex-col justify-between py-16 gap-10 w-fit">
-          <div className="flex flex-col gap-4 items-start w-fit">
+    <section className="bg-white px-4 sm:px-10 lg:px-30 pb-10 flex flex-col items-center justify-between gap-20">
+      <div className="flex flex-col-reverse lg:flex-row items-center gap-10">
+        <div className="flex flex-col justify-between py-8 gap-6 w-full lg:w-1/2">
+          <div className="flex flex-col gap-4 items-start">
             <img src={icon} alt="Imagem engrenagens" />
-            <h2 className="text-4xl font-semibold text-justify font-display uppercase w-min">
-              Nossos Serviços
+            <h2 className="text-3xl lg:text-4xl font-semibold text-justify font-display uppercase">
+              Nossos Diferenciais
             </h2>
           </div>
-          <p className="text-xl font-medium w-1/2">
+          <p className="text-base lg:text-xl font-medium">
             Desenvolvemos soluções tecnológicas personalizadas para impulsionar
             negócios e transformar ideias em realidade. Com expertise em
             desenvolvimento sob demanda, manutenção de sistemas e produtos
@@ -65,8 +62,15 @@ export default function Differences() {
             para atender às suas necessidades.
           </p>
         </div>
+        <div className="w-full lg:w-1/2 flex justify-center">
+          <img
+            className="w-2/3 sm:w-1/2 lg:w-7xl"
+            src={image}
+            alt="Imagem serviços"
+          />
+        </div>
       </div>
-      <Cards title="Porque escolher a pantheo.tech?" cards={differences} />
+      <Cards title="Porque escolher a Pantheo.tech?" cards={differences} />
     </section>
   );
 }

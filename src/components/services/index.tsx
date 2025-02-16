@@ -50,16 +50,16 @@ const maintenance = [
 
 export default function Services() {
   return (
-    <section className="bg-white px-30 flex flex-col justify-between gap-20">
-      <div className="flex justify-between items-center h-fit">
-        <div className="flex flex-col justify-between py-16 gap-10 w-fit">
-          <div className="flex flex-col gap-4 items-start w-fit">
-            <img src={icon} alt="Imagem engrenagens" />
-            <h2 className="text-4xl font-semibold texzt-justify font-display uppercase w-min">
+    <section className="bg-white px-4 sm:px-10 lg:px-30 py-10 flex flex-col gap-20">
+      <div className="flex flex-col-reverse lg:flex-row items-center gap-10">
+        <div className="flex flex-col gap-6 w-full lg:w-1/2 text-center lg:text-left">
+          <div className="flex flex-col gap-4 items-center lg:items-start">
+            <img src={icon} alt="Imagem engrenagens" className="w-12" />
+            <h2 className="text-3xl lg:text-4xl font-semibold uppercase">
               Nossos Serviços
             </h2>
           </div>
-          <p className="text-xl font-medium w-1/2">
+          <p className="text-base lg:text-lg font-medium text-gray-700">
             Desenvolvemos soluções tecnológicas personalizadas para impulsionar
             negócios e transformar ideias em realidade. Com expertise em
             desenvolvimento sob demanda, manutenção de sistemas e produtos
@@ -67,8 +67,8 @@ export default function Services() {
             para atender às suas necessidades.
           </p>
         </div>
-        <div>
-          <img className="w-7xl" src={image} alt="Imagem serviços" />
+        <div className="w-full lg:w-1/2 flex justify-center">
+          <img className="w-3/4 lg:w-full" src={image} alt="Imagem serviços" />
         </div>
       </div>
       <Cards title="Desenvolvimento Sob Demanda" cards={services} />

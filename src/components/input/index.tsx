@@ -23,26 +23,17 @@ export default function InputComponent({
   disabled,
   register,
 }: InputProps) {
-  const commonClasses = `w-full ${
-    disabled ? "bg-gray-200 cursor-not-allowed" : "bg-white"
-  } border-none font-display text-base font-normal text-black focus:outline-none text-center`;
-
   return (
-    <div
-      className={`flex flex-col justify-center gap-1 font-main font-normal text-white ${
-        className || "w-full text-base"
-      }`}
-    >
-      <label className={`capitalize ${classnameLabel}`} htmlFor={label}>
+    <div className={`flex flex-col gap-1 text-white ${className || "w-full"}`}>
+      <label
+        className={`capitalize font-medium ${classnameLabel}`}
+        htmlFor={label}
+      >
         {label} {required && <span className="text-red-500">*</span>}
       </label>
-      <div
-        className={`flex items-center w-full h-12 rounded-xl py-1 px-3 border-2 ${
-          disabled ? "bg-gray-200 cursor-not-allowed" : "bg-white"
-        } border-[#555555]`}
-      >
+      <div className="flex items-center w-full h-12 rounded-xl py-1 px-3 border-2 border-[#555555] bg-white">
         <input
-          className={commonClasses}
+          className="w-full bg-white text-black focus:outline-none p-2"
           type={type}
           id={label}
           placeholder={placeholder}

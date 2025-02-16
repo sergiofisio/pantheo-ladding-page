@@ -14,4 +14,9 @@
   --spacing: 0.25rem;
   --shadow-button: -0.5rem 0.2rem 1rem 0.1rem #fff;
   --shadow-buttonHover: -0.5rem 0.2rem 1rem 0.1rem #90caf9;
+  /* --breakpoint-sm: 640px; */
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 1024px;
+  --breakpoint-xl: 1280px;
+  --breakpoint-2xl: 1536px;
 }

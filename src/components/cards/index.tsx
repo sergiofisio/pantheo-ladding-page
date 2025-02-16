@@ -9,9 +9,9 @@ export default function Cards({
   cards: { icon: string; title: string; description: string }[];
 }) {
   return (
-    <div className="flex flex-col gap-10">
+    <div className="flex flex-col gap-10 px-4 md:px-10 lg:px-20">
       <Title text={title} />
-      <div className="flex flex-wrap gap-10 justify-evenly">
+      <div className="flex flex-wrap gap-6 justify-center md:justify-evenly">
         {cards.map((service, index) => (
           <Card
             key={index}

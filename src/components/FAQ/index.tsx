@@ -15,9 +15,9 @@ export default function FrequentQuestions() {
   };
 
   return (
-    <section className="px-30 py-10 bg-gray-100 flex flex-col items-center gap-10">
+    <section className="px-4 sm:px-10 lg:px-30 py-10 bg-gray-100 flex flex-col items-center gap-10">
       <Title text="FAQ" />
-      <div className="w-full">
+      <div className="w-full max-w-4xl">
         {FAQ.map(({ question, answer }, index) => (
           <Accordion
             key={index}
@@ -30,6 +30,7 @@ export default function FrequentQuestions() {
               border: "1px solid #374151",
               boxShadow: "0 1px 3px rgba(0, 0, 0, 0.1)",
               transition: "all 0.3s ease-in-out",
+              marginBottom: "8px",
             }}
           >
             <AccordionSummary
@@ -37,13 +38,13 @@ export default function FrequentQuestions() {
                 <img
                   src={ArrowIcon}
                   alt="Expandir"
-                  className={`w-10 h-10 transition-transform duration-300 ${
-                    expanded === `panel${index}` ? "rotate-180" : "rotate-0"
+                  className={`w-6 h-6 transition-transform duration-300 ${
+                    expanded === `panel${index}` ? "rotate-180" : "rotate-180"
                   } text-blue-500`}
                 />
               }
               sx={{
-                padding: "1rem 1.5rem",
+                padding: "1rem",
                 borderRadius: "0.5rem",
                 "&:hover": {
                   backgroundColor: "#1f2937",
@@ -55,7 +56,7 @@ export default function FrequentQuestions() {
               </Typography>
             </AccordionSummary>
             <AccordionDetails
-              sx={{ padding: "1rem 1.5rem", borderTop: "1px solid #374151" }}
+              sx={{ padding: "1rem", borderTop: "1px solid #374151" }}
             >
               <Typography sx={{ color: "#D1D5DB" }}>{answer}</Typography>
             </AccordionDetails>

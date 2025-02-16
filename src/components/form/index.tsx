@@ -1,4 +1,3 @@
-// src/components/form/ContactForm.tsx
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { formSchema, FormSchema } from "../../schemas/forms";
@@ -34,22 +33,22 @@ export default function ContactForm() {
   };
 
   return (
-    <section className="p-30 bg-darkBlue text-white flex justify-center gap-8">
-      <div className="w-1/3 font-display flex flex-col gap-10">
-        <h2 className="text-4xl font-black text-center">
+    <section className="p-6 sm:p-10 lg:p-30 bg-darkBlue text-white flex flex-col lg:flex-row justify-center gap-8">
+      <div className="w-full lg:w-1/3 font-display flex flex-col gap-10 text-center lg:text-left">
+        <h2 className="text-3xl lg:text-4xl font-black">
           Vamos tirar sua ideia do papel?
         </h2>
-        <p className="text-xl font-semibold">
+        <p className="text-lg lg:text-xl font-semibold">
           Entre em contato e descubra como podemos transformar seu projeto em
           realidade!
         </p>
       </div>
       <form
         onSubmit={handleSubmit(onSubmit)}
-        className="bg-black text-white rounded-3xl w-1/2 p-10 flex flex-col gap-8"
+        className="bg-black text-white rounded-3xl w-full lg:w-1/2 p-6 sm:p-10 flex flex-col gap-6"
       >
-        <div className="flex gap-4">
-          <div className="flex flex-col gap-4 w-2/3">
+        <div className="flex flex-col sm:flex-row gap-4">
+          <div className="flex flex-col gap-4 w-full sm:w-2/3">
             <Input
               label="Nome"
               type="text"
@@ -75,25 +74,25 @@ export default function ContactForm() {
               required
             />
             <Input
-              label="Celular (DDD+numero) ex: 11999999999"
+              label="Celular"
               type="text"
-              placeholder="Digite seu telefone Celular"
+              placeholder="DDD + Número"
               register={register("phone")}
               errorMessage={errors.phone?.message}
               required
             />
           </div>
 
-          <div className="w-1/3 relative">
+          <div className="w-full sm:w-1/3 relative">
             <label className="text-white font-medium">
               Quais serviços você precisa?
             </label>
             {[
               "Desenvolvimento de apps",
               "Desenvolvimento de sites",
-              "Desenvolvimento de e-commerce",
-              "Desenvolvimento de APIs",
-              "Desenvolvimento de Software",
+              "E-commerce",
+              "APIs",
+              "Software personalizado",
               "Manutenção de sites",
               "Manutenção de apps",
             ].map((service) => (
@@ -121,12 +120,11 @@ export default function ContactForm() {
           <textarea
             placeholder="Descreva seu problema"
             rows={4}
-            cols={50}
             {...register("message")}
             className="w-full p-2 mt-2 rounded-lg bg-white text-black resize-none"
           />
           {errors.message && (
-            <span className="text-red-500 text-sm min-h-[20px] block">
+            <span className="text-red-500 text-sm">
               {errors.message.message}
             </span>
           )}
@@ -134,7 +132,7 @@ export default function ContactForm() {
         <ButtonComponent
           text="Enviar"
           onClick={handleSubmit(onSubmit)}
-          className="bg-darkBlue w-full hover:bg-darkBlue"
+          className="bg-button w-full hover:bg-blue-600"
         />
       </form>
     </section>
