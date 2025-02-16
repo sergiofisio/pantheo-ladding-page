@@ -33,7 +33,10 @@ export default function ContactForm() {
   };
 
   return (
-    <section className="p-6 sm:p-10 lg:p-30 bg-darkBlue text-white flex flex-col lg:flex-row justify-center gap-8">
+    <section
+      id="contact"
+      className="p-6 sm:p-10 lg:p-30 bg-darkBlue text-white flex flex-col lg:flex-row justify-center gap-8"
+    >
       <div className="w-full lg:w-1/3 font-display flex flex-col gap-10 text-center lg:text-left">
         <h2 className="text-3xl lg:text-4xl font-black">
           Vamos tirar sua ideia do papel?

@@ -45,7 +45,10 @@ const differences = [
 
 export default function Differences() {
   return (
-    <section className="bg-white px-4 sm:px-10 lg:px-30 pb-10 flex flex-col items-center justify-between gap-20">
+    <section
+      id="differentials"
+      className="bg-white px-4 sm:px-10 lg:px-30 pb-10 flex flex-col items-center justify-between gap-20"
+    >
       <div className="flex flex-col-reverse lg:flex-row items-center gap-10">
         <div className="flex flex-col justify-between py-8 gap-6 w-full lg:w-1/2">
           <div className="flex flex-col gap-4 items-start">

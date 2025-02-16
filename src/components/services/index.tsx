@@ -50,7 +50,10 @@ const maintenance = [
 
 export default function Services() {
   return (
-    <section className="bg-white px-4 sm:px-10 lg:px-30 py-10 flex flex-col gap-20">
+    <section
+      id="services"
+      className="bg-white px-4 sm:px-10 lg:px-30 py-10 flex flex-col gap-20"
+    >
       <div className="flex flex-col-reverse lg:flex-row items-center gap-10">
         <div className="flex flex-col gap-6 w-full lg:w-1/2 text-center lg:text-left">
           <div className="flex flex-col gap-4 items-center lg:items-start">
